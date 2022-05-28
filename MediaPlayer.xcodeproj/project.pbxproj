@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3807D4D1C9EA2BDF42C86DFA /* Pods_MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3867154DDF5C62AD65F90343 /* Pods_MediaPlayer.framework */; };
 		EAD824EE284274D80062A895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD824ED284274D80062A895 /* AppDelegate.swift */; };
 		EAD824F0284274D80062A895 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD824EF284274D80062A895 /* SceneDelegate.swift */; };
-		EAD824F2284274D80062A895 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD824F1284274D80062A895 /* ViewController.swift */; };
 		EAD824F5284274D80062A895 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD824F3284274D80062A895 /* Main.storyboard */; };
 		EAD824F7284274D90062A895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAD824F6284274D90062A895 /* Assets.xcassets */; };
-		EAD824FA284274D90062A895 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD824F8284274D90062A895 /* LaunchScreen.storyboard */; };
+		EAD82506284275A80062A895 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD82505284275A80062A895 /* Video.swift */; };
+		EAD82508284275D20062A895 /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD82507284275D20062A895 /* VideoController.swift */; };
+		EAD8250A284275EF0062A895 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD82509284275EF0062A895 /* VideoViewController.swift */; };
+		EAD8250C284276050062A895 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8250B284276050062A895 /* PostTableViewController.swift */; };
+		EAD8250E284277270062A895 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8250D284277270062A895 /* Error.swift */; };
+		EAD82510284279DF0062A895 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8250F284279DF0062A895 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3867154DDF5C62AD65F90343 /* Pods_MediaPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF20F2A863EAA67B7886B82 /* Pods-MediaPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaPlayer.release.xcconfig"; path = "Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		D2B04B7766C55A8BE91C8E6B /* Pods-MediaPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaPlayer.debug.xcconfig"; path = "Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		EAD824EA284274D80062A895 /* MediaPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD824ED284274D80062A895 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAD824EF284274D80062A895 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EAD824F1284274D80062A895 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EAD824F4284274D80062A895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAD824F6284274D90062A895 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EAD824F9284274D90062A895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAD824FB284274D90062A895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAD82505284275A80062A895 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		EAD82507284275D20062A895 /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
+		EAD82509284275EF0062A895 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		EAD8250B284276050062A895 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		EAD8250D284277270062A895 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		EAD8250F284279DF0062A895 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3807D4D1C9EA2BDF42C86DFA /* Pods_MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2C99E6A0B58B1AA08CD8B96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2B04B7766C55A8BE91C8E6B /* Pods-MediaPlayer.debug.xcconfig */,
+				4FF20F2A863EAA67B7886B82 /* Pods-MediaPlayer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D1A9BF2ED518926BE242E099 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3867154DDF5C62AD65F90343 /* Pods_MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EAD824E1284274D80062A895 = {
 			isa = PBXGroup;
 			children = (
 				EAD824EC284274D80062A895 /* MediaPlayer */,
 				EAD824EB284274D80062A895 /* Products */,
+				A2C99E6A0B58B1AA08CD8B96 /* Pods */,
+				D1A9BF2ED518926BE242E099 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +88,51 @@
 		EAD824EC284274D80062A895 /* MediaPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				EAD824ED284274D80062A895 /* AppDelegate.swift */,
-				EAD824EF284274D80062A895 /* SceneDelegate.swift */,
-				EAD824F1284274D80062A895 /* ViewController.swift */,
-				EAD824F3284274D80062A895 /* Main.storyboard */,
-				EAD824F6284274D90062A895 /* Assets.xcassets */,
-				EAD824F8284274D90062A895 /* LaunchScreen.storyboard */,
-				EAD824FB284274D90062A895 /* Info.plist */,
+				EAD82504284275460062A895 /* Models */,
+				EAD82503284275330062A895 /* Controllers */,
+				EAD82502284274FF0062A895 /* Views */,
+				EAD82501284274ED0062A895 /* Resources */,
 			);
 			path = MediaPlayer;
+			sourceTree = "<group>";
+		};
+		EAD82501284274ED0062A895 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EAD824ED284274D80062A895 /* AppDelegate.swift */,
+				EAD824EF284274D80062A895 /* SceneDelegate.swift */,
+				EAD824F6284274D90062A895 /* Assets.xcassets */,
+				EAD824FB284274D90062A895 /* Info.plist */,
+				EAD8250D284277270062A895 /* Error.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EAD82502284274FF0062A895 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EAD824F3284274D80062A895 /* Main.storyboard */,
+				EAD8250F284279DF0062A895 /* PostTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EAD82503284275330062A895 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAD82507284275D20062A895 /* VideoController.swift */,
+				EAD8250B284276050062A895 /* PostTableViewController.swift */,
+				EAD82509284275EF0062A895 /* VideoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EAD82504284275460062A895 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EAD82505284275A80062A895 /* Video.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAD824FE284274D90062A895 /* Build configuration list for PBXNativeTarget "MediaPlayer" */;
 			buildPhases = (
+				ABC63A1230FE73EC524478A0 /* [CP] Check Pods Manifest.lock */,
 				EAD824E6284274D80062A895 /* Sources */,
 				EAD824E7284274D80062A895 /* Frameworks */,
 				EAD824E8284274D80062A895 /* Resources */,
+				34B8CCD545103CACB4BA55EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,7 +195,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD824FA284274D90062A895 /* LaunchScreen.storyboard in Resources */,
 				EAD824F7284274D90062A895 /* Assets.xcassets in Resources */,
 				EAD824F5284274D80062A895 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +202,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34B8CCD545103CACB4BA55EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABC63A1230FE73EC524478A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MediaPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EAD824E6284274D80062A895 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD824F2284274D80062A895 /* ViewController.swift in Sources */,
 				EAD824EE284274D80062A895 /* AppDelegate.swift in Sources */,
+				EAD8250C284276050062A895 /* PostTableViewController.swift in Sources */,
+				EAD82506284275A80062A895 /* Video.swift in Sources */,
+				EAD82510284279DF0062A895 /* PostTableViewCell.swift in Sources */,
 				EAD824F0284274D80062A895 /* SceneDelegate.swift in Sources */,
+				EAD8250A284275EF0062A895 /* VideoViewController.swift in Sources */,
+				EAD8250E284277270062A895 /* Error.swift in Sources */,
+				EAD82508284275D20062A895 /* VideoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,14 +269,6 @@
 				EAD824F4284274D80062A895 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EAD824F8284274D90062A895 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EAD824F9284274D90062A895 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -282,6 +390,7 @@
 		};
 		EAD824FF284274D90062A895 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2B04B7766C55A8BE91C8E6B /* Pods-MediaPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,7 +398,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SP8PT7VLP6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MediaPlayer/Info.plist;
+				INFOPLIST_FILE = MediaPlayer/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -310,6 +419,7 @@
 		};
 		EAD82500284274D90062A895 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FF20F2A863EAA67B7886B82 /* Pods-MediaPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,7 +427,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SP8PT7VLP6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MediaPlayer/Info.plist;
+				INFOPLIST_FILE = MediaPlayer/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
