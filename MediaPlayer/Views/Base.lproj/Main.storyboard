@@ -24,7 +24,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7V-Eo-cHX">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7V-Eo-cHX">
                                             <rect key="frame" x="20" y="11" width="374" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -40,7 +40,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="titleLabel" destination="k7V-Eo-cHX" id="VDG-mY-lES"/>
-                                    <segue destination="Dpo-Wy-c8j" kind="show" identifier="toVideoVC" id="Ski-do-6GJ"/>
+                                    <segue destination="Dpo-Wy-c8j" kind="show" identifier="toVideoVC" id="1kh-Io-wKq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -69,34 +69,44 @@
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aC8-bn-Mjc">
                                 <rect key="frame" x="0.0" y="44" width="414" height="798"/>
                             </imageView>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wp-Wa-Y5P">
-                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                            <wkWebView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="2wp-Wa-Y5P">
+                                <rect key="frame" x="0.0" y="252" width="414" height="338"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
+                                    <wkPreferences key="preferences" javaScriptCanOpenWindowsAutomatically="YES"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlr-6L-ZAO">
+                                <rect key="frame" x="0.0" y="252" width="414" height="338"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hM9-Cj-hQ4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="leading" secondItem="hM9-Cj-hQ4" secondAttribute="leading" id="5bC-d8-cRS"/>
+                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hM9-Cj-hQ4" secondAttribute="leading" id="5bC-d8-cRS"/>
                             <constraint firstItem="hM9-Cj-hQ4" firstAttribute="trailing" secondItem="TH6-Ii-71K" secondAttribute="trailing" id="FOo-BX-Ofe"/>
+                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="leading" secondItem="TH6-Ii-71K" secondAttribute="leading" id="Kfc-c0-jLC"/>
                             <constraint firstItem="TH6-Ii-71K" firstAttribute="top" secondItem="hM9-Cj-hQ4" secondAttribute="top" id="NtX-SE-rbb"/>
                             <constraint firstItem="aC8-bn-Mjc" firstAttribute="top" secondItem="hM9-Cj-hQ4" secondAttribute="top" id="QZJ-bv-WjU"/>
+                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="centerX" secondItem="hM9-Cj-hQ4" secondAttribute="centerX" id="Rhc-Bd-wSE"/>
                             <constraint firstItem="hM9-Cj-hQ4" firstAttribute="bottom" secondItem="aC8-bn-Mjc" secondAttribute="bottom" id="ada-W1-sxC"/>
-                            <constraint firstItem="hM9-Cj-hQ4" firstAttribute="bottom" secondItem="2wp-Wa-Y5P" secondAttribute="bottom" id="apT-ux-TE2"/>
+                            <constraint firstItem="hM9-Cj-hQ4" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2wp-Wa-Y5P" secondAttribute="bottom" id="apT-ux-TE2"/>
                             <constraint firstItem="hM9-Cj-hQ4" firstAttribute="bottom" secondItem="TH6-Ii-71K" secondAttribute="bottom" id="bbe-7X-k7E"/>
+                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="centerY" secondItem="hM9-Cj-hQ4" secondAttribute="centerY" constant="-22" id="g1a-y4-9SO"/>
+                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="top" secondItem="aC8-bn-Mjc" secondAttribute="top" constant="208" id="joD-yb-zqa"/>
                             <constraint firstItem="aC8-bn-Mjc" firstAttribute="leading" secondItem="hM9-Cj-hQ4" secondAttribute="leading" id="lbP-HR-Lul"/>
-                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="top" secondItem="hM9-Cj-hQ4" secondAttribute="top" id="pIn-Pv-6T4"/>
+                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hM9-Cj-hQ4" secondAttribute="top" id="pIn-Pv-6T4"/>
                             <constraint firstItem="aC8-bn-Mjc" firstAttribute="trailing" secondItem="hM9-Cj-hQ4" secondAttribute="trailing" id="tck-cC-shI"/>
                             <constraint firstItem="TH6-Ii-71K" firstAttribute="leading" secondItem="hM9-Cj-hQ4" secondAttribute="leading" id="xna-te-F3o"/>
-                            <constraint firstItem="hM9-Cj-hQ4" firstAttribute="trailing" secondItem="2wp-Wa-Y5P" secondAttribute="trailing" id="zzo-Je-Oes"/>
+                            <constraint firstItem="hM9-Cj-hQ4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2wp-Wa-Y5P" secondAttribute="trailing" id="zzo-Je-Oes"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QJR-wY-JdE"/>
                     <connections>
+                        <outlet property="avView" destination="vlr-6L-ZAO" id="lH3-gl-cUM"/>
                         <outlet property="browserView" destination="2wp-Wa-Y5P" id="2vo-EE-hS0"/>
                         <outlet property="gifView" destination="aC8-bn-Mjc" id="mHp-Cu-NOx"/>
                         <outlet property="playerView" destination="TH6-Ii-71K" id="Qx7-TW-bjF"/>
@@ -105,6 +115,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZ3-MI-uAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="744.92753623188412" y="89.732142857142847"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="5bI-WS-EK4">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="Y7I-v3-bAg" customClass="AVViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0Ab-E7-Uc9"/>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nr7-pn-m6L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="133"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zbj-DD-QID">
+            <objects>
+                <viewController id="JXp-RG-fHt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cvO-zN-lPw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOd-mb-UgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="4"/>
         </scene>
     </scenes>
     <resources>

@@ -11,23 +11,29 @@
 import UIKit
 import YouTubePlayer
 import WebKit
+import AVKit
+import AVFoundation
 
 
-class VideoViewController: UIViewController, YouTubePlayerDelegate {
+class VideoViewController: UIViewController, YouTubePlayerDelegate, AVPlayerViewControllerDelegate {
     
     @IBOutlet weak var gifView: UIImageView!
     @IBOutlet var playerView: YouTubePlayerView!
     @IBOutlet weak var browserView: WKWebView!
+    @IBOutlet weak var avView: UIView!
     let configuration = WKWebViewConfiguration()
     var videoToSend = Video(url: "", title: "")
+   // var player: AVPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         for _ in "o" {
             if videoToSend.url.contains("imgur") {
+                print("IMGUR \(videoToSend.url)")
                 playerView.isHidden = true
                 browserView.isHidden = false
                 gifView.isHidden = true
+                avView.isHidden = true
                 loadImgur(url: videoToSend.url)
                 continue
             }
@@ -36,21 +42,20 @@ class VideoViewController: UIViewController, YouTubePlayerDelegate {
                 playerView.isHidden = true
                 browserView.isHidden = true
                 gifView.isHidden = false
+                avView.isHidden = true
                 loadGif(url: videoToSend.url)
                 continue
             }
-            
             if videoToSend.url.contains("gfycat") {
                 print("GFYCAT \(videoToSend.url)")
                 playerView.isHidden = true
                 browserView.isHidden = false
                 gifView.isHidden = true
+                avView.isHidden = true
                 loadGfycat(url: videoToSend.url)
                 
                 continue
             }
-            
-            
             else {
                 print("OTHER \(videoToSend.url)")
                 
@@ -58,17 +63,22 @@ class VideoViewController: UIViewController, YouTubePlayerDelegate {
                 gifView.isHidden = true
                 browserView.isHidden = true
                 playerView.isHidden = false
+                avView.isHidden = true
                 loadVideo(url: videoToSend.url)
             }
         }
     }
+  
+   
+    
     func loadGif(url: String) {
         let gifImageView = gifView
-        guard let url = URL(string: "\(videoToSend.url)") else {return}
+        guard let url = URL(string: url) else {return}
         guard let gifData = try? Data(contentsOf: url),
               let source =  CGImageSourceCreateWithData(gifData as CFData, nil) else { return }
         var images = [UIImage]()
         let imageCount = CGImageSourceGetCount(source)
+        print(images.count)
         for i in 0 ..< imageCount {
             if let image = CGImageSourceCreateImageAtIndex(source, i, nil) {
                 images.append(UIImage(cgImage: image))
@@ -93,16 +103,14 @@ class VideoViewController: UIViewController, YouTubePlayerDelegate {
                 skip = true
             }
         }
-
         guard let url = URL(string: "https://gfycat.com/ifr/" + "\(phrase)" + "?speed=1%27%20allowfullscreen=%20") else {return}
         print(url)
         let myRequest = URLRequest(url: url)
-            
-           // self.browserView.configuration.allowsInlineMediaPlayback = true
-            self.browserView.load(myRequest)
+        self.browserView.load(myRequest)
         }
     
     func loadImgur(url: String) {
+        /*
         var skip = false
         var phrase = ""
         for i in url.reversed() {
@@ -113,13 +121,15 @@ class VideoViewController: UIViewController, YouTubePlayerDelegate {
                 skip = true
             }
         }
+
         guard let url = URL(string: "https://i.imgur.com/" + phrase) else {return}
+        */
+        guard let url = URL(string: url) else {return}
         print(url)
         let myRequest = URLRequest(url: url)
             
             self.browserView.load(myRequest)
     }
-    
     
     func loadVideo(url: String) {
         
@@ -141,4 +151,13 @@ class VideoViewController: UIViewController, YouTubePlayerDelegate {
  
  self.present(vc, animated: true) { vc.player?.play() }
  }
+ 
+ func addPlayerToView(_ view: UIView, url: String) {
+     guard let url = URL(string: url) else {return}
+         player = AVPlayer(url: url)
+         let playerLayer = AVPlayerLayer(player: player)
+         playerLayer.videoGravity = .resizeAspectFill
+         view.layer.addSublayer(playerLayer)
+     player?.play()
+     }
  */

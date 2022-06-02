@@ -10,7 +10,7 @@ import Foundation
 class VideoController {
     
     static func fetchPosts(completion: @escaping (Result<[Video], VideoError>) -> Void) {
-
+        
         guard let finalURL = URL(string: "https://www.reddit.com/r/gifs/.json") else {return}
         print(finalURL)
         URLSession.shared.dataTask(with: finalURL) { (data, response, error) in
