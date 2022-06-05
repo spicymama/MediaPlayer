@@ -11,7 +11,7 @@ import UIKit
     class TitleTableViewCell: UITableViewCell {
 
         @IBOutlet weak var titleLabel: UILabel!
-        var video: Video? {
+        var video: Media? {
             didSet {
                 self.titleLabel.text = video?.title
             }

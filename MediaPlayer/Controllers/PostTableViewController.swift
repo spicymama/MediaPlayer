@@ -6,16 +6,15 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
-import UIKit
+class PostTableViewController: UITableViewController, AVPlayerViewControllerDelegate {
 
-class PostTableViewController: UITableViewController {
-
-    var videoArr: [Video] = []
+    var videoArr: [Media] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         updateViews()
     }
     var refresh: UIRefreshControl = UIRefreshControl()
@@ -54,13 +53,29 @@ class PostTableViewController: UITableViewController {
 
         return cell
     }
-    
-
+    /*
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as? TitleTableViewCell else {return}
+        guard let url = URL(string: "https://v.redd.it/93ht09l6kg291/DASH_480.mp4") else {return}
+        let player = AVPlayer(url: url)
+        
+        let vc = AVPlayerViewController()
+        vc.view.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
+        vc.player = player
+        
+        self.present(vc, animated: true) { vc.player?.play() }
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { [weak player] _ in
+            player?.seek(to: CMTime.zero)
+            vc.player?.play()
+            
+        }
+    }
+*/
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toVideoVC" {
+        if segue.identifier == "toAVView" {
             guard let indexPath = tableView.indexPathForSelectedRow,
-                  let destinationVC = segue.destination as? VideoViewController else {return}
+                  let destinationVC = segue.destination as? GFYViewController else {return}
             let videoToSend = videoArr[indexPath.row]
             destinationVC.videoToSend = videoToSend
         }

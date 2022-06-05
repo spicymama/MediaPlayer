@@ -40,7 +40,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="titleLabel" destination="k7V-Eo-cHX" id="VDG-mY-lES"/>
-                                    <segue destination="Dpo-Wy-c8j" kind="show" identifier="toVideoVC" id="1kh-Io-wKq"/>
+                                    <segue destination="mu5-we-QkU" kind="show" identifier="toAVView" id="IbQ-x8-4xi"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,91 +54,64 @@
             </objects>
             <point key="canvasLocation" x="-16" y="90"/>
         </scene>
-        <!--Video View Controller-->
-        <scene sceneID="oEI-eW-h1f">
+        <!--View Controller-->
+        <scene sceneID="V8S-53-E5d">
             <objects>
-                <viewController id="Dpo-Wy-c8j" customClass="VideoViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kl5-m9-Wdp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <viewController modalPresentationStyle="overFullScreen" id="mu5-we-QkU" customClass="GFYViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFit" id="9Ie-Q7-g5C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TH6-Ii-71K" customClass="YouTubePlayerView" customModule="YouTubePlayer">
-                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3U-ik-yoV">
+                                <rect key="frame" x="0.0" y="151" width="414" height="627"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aC8-bn-Mjc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YWY-vs-XvC">
+                                <rect key="frame" x="0.0" y="151" width="414" height="627"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <wkWebView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="2wp-Wa-Y5P">
-                                <rect key="frame" x="0.0" y="252" width="414" height="338"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences" javaScriptCanOpenWindowsAutomatically="YES"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlr-6L-ZAO">
-                                <rect key="frame" x="0.0" y="252" width="414" height="338"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwY-uq-wAM">
+                                <rect key="frame" x="54.5" y="44" width="60.5" height="31"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="mu5-we-QkU" eventType="touchUpInside" id="jmz-KK-P8G"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VeY-08-uVt" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                <rect key="frame" x="0.0" y="288" width="414" height="320"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="hM9-Cj-hQ4"/>
+                        <viewLayoutGuide key="safeArea" id="eiB-eL-1kb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hM9-Cj-hQ4" secondAttribute="leading" id="5bC-d8-cRS"/>
-                            <constraint firstItem="hM9-Cj-hQ4" firstAttribute="trailing" secondItem="TH6-Ii-71K" secondAttribute="trailing" id="FOo-BX-Ofe"/>
-                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="leading" secondItem="TH6-Ii-71K" secondAttribute="leading" id="Kfc-c0-jLC"/>
-                            <constraint firstItem="TH6-Ii-71K" firstAttribute="top" secondItem="hM9-Cj-hQ4" secondAttribute="top" id="NtX-SE-rbb"/>
-                            <constraint firstItem="aC8-bn-Mjc" firstAttribute="top" secondItem="hM9-Cj-hQ4" secondAttribute="top" id="QZJ-bv-WjU"/>
-                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="centerX" secondItem="hM9-Cj-hQ4" secondAttribute="centerX" id="Rhc-Bd-wSE"/>
-                            <constraint firstItem="hM9-Cj-hQ4" firstAttribute="bottom" secondItem="aC8-bn-Mjc" secondAttribute="bottom" id="ada-W1-sxC"/>
-                            <constraint firstItem="hM9-Cj-hQ4" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2wp-Wa-Y5P" secondAttribute="bottom" id="apT-ux-TE2"/>
-                            <constraint firstItem="hM9-Cj-hQ4" firstAttribute="bottom" secondItem="TH6-Ii-71K" secondAttribute="bottom" id="bbe-7X-k7E"/>
-                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="centerY" secondItem="hM9-Cj-hQ4" secondAttribute="centerY" constant="-22" id="g1a-y4-9SO"/>
-                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="top" secondItem="aC8-bn-Mjc" secondAttribute="top" constant="208" id="joD-yb-zqa"/>
-                            <constraint firstItem="aC8-bn-Mjc" firstAttribute="leading" secondItem="hM9-Cj-hQ4" secondAttribute="leading" id="lbP-HR-Lul"/>
-                            <constraint firstItem="2wp-Wa-Y5P" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hM9-Cj-hQ4" secondAttribute="top" id="pIn-Pv-6T4"/>
-                            <constraint firstItem="aC8-bn-Mjc" firstAttribute="trailing" secondItem="hM9-Cj-hQ4" secondAttribute="trailing" id="tck-cC-shI"/>
-                            <constraint firstItem="TH6-Ii-71K" firstAttribute="leading" secondItem="hM9-Cj-hQ4" secondAttribute="leading" id="xna-te-F3o"/>
-                            <constraint firstItem="hM9-Cj-hQ4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2wp-Wa-Y5P" secondAttribute="trailing" id="zzo-Je-Oes"/>
+                            <constraint firstItem="YWY-vs-XvC" firstAttribute="bottom" secondItem="Z3U-ik-yoV" secondAttribute="bottom" id="6Tm-42-4cT"/>
+                            <constraint firstItem="YWY-vs-XvC" firstAttribute="trailing" secondItem="Z3U-ik-yoV" secondAttribute="trailing" id="83b-4w-9uW"/>
+                            <constraint firstItem="VeY-08-uVt" firstAttribute="top" secondItem="YWY-vs-XvC" secondAttribute="top" constant="137" id="AU6-QU-UmV"/>
+                            <constraint firstItem="VeY-08-uVt" firstAttribute="leading" secondItem="eiB-eL-1kb" secondAttribute="leading" id="Dgf-B3-LMw"/>
+                            <constraint firstItem="VeY-08-uVt" firstAttribute="centerY" secondItem="eiB-eL-1kb" secondAttribute="centerY" constant="-5" id="ICh-ZZ-Msb"/>
+                            <constraint firstItem="cwY-uq-wAM" firstAttribute="top" secondItem="eiB-eL-1kb" secondAttribute="top" id="IbF-Zg-2QV"/>
+                            <constraint firstItem="Z3U-ik-yoV" firstAttribute="trailing" secondItem="eiB-eL-1kb" secondAttribute="trailing" id="Jfd-hN-rds"/>
+                            <constraint firstItem="YWY-vs-XvC" firstAttribute="top" secondItem="cwY-uq-wAM" secondAttribute="bottom" constant="76" id="N70-C1-tjL"/>
+                            <constraint firstItem="eiB-eL-1kb" firstAttribute="bottom" secondItem="Z3U-ik-yoV" secondAttribute="bottom" constant="84" id="NYs-9h-a7m"/>
+                            <constraint firstItem="VeY-08-uVt" firstAttribute="centerX" secondItem="eiB-eL-1kb" secondAttribute="centerX" id="btg-JB-hhi"/>
+                            <constraint firstItem="eiB-eL-1kb" firstAttribute="trailing" secondItem="cwY-uq-wAM" secondAttribute="trailing" constant="299" id="ctB-4I-6U3"/>
+                            <constraint firstItem="eiB-eL-1kb" firstAttribute="trailing" secondItem="VeY-08-uVt" secondAttribute="trailing" id="gNf-QM-Swo"/>
+                            <constraint firstItem="Z3U-ik-yoV" firstAttribute="top" secondItem="eiB-eL-1kb" secondAttribute="top" constant="107" id="gRM-Nb-7Nt"/>
+                            <constraint firstItem="cwY-uq-wAM" firstAttribute="leading" secondItem="YWY-vs-XvC" secondAttribute="leading" constant="54.5" id="kbH-te-ZBn"/>
+                            <constraint firstItem="Z3U-ik-yoV" firstAttribute="leading" secondItem="eiB-eL-1kb" secondAttribute="leading" id="yN6-Gn-uk9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="QJR-wY-JdE"/>
+                    <navigationItem key="navigationItem" id="kv8-uA-VOF"/>
                     <connections>
-                        <outlet property="avView" destination="vlr-6L-ZAO" id="lH3-gl-cUM"/>
-                        <outlet property="browserView" destination="2wp-Wa-Y5P" id="2vo-EE-hS0"/>
-                        <outlet property="gifView" destination="aC8-bn-Mjc" id="mHp-Cu-NOx"/>
-                        <outlet property="playerView" destination="TH6-Ii-71K" id="Qx7-TW-bjF"/>
+                        <outlet property="GFYView" destination="Z3U-ik-yoV" id="Foy-5f-5aX"/>
+                        <outlet property="redditGifView" destination="YWY-vs-XvC" id="ILk-Kw-SPu"/>
+                        <outlet property="youtubeView" destination="VeY-08-uVt" id="bbA-NS-Ojm"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rZ3-MI-uAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rHs-tI-5YP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.92753623188412" y="89.732142857142847"/>
-        </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="5bI-WS-EK4">
-            <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="Y7I-v3-bAg" customClass="AVViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="0Ab-E7-Uc9"/>
-                </avPlayerViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nr7-pn-m6L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1687" y="133"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="zbj-DD-QID">
-            <objects>
-                <viewController id="JXp-RG-fHt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cvO-zN-lPw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IOd-mb-UgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-558" y="4"/>
+            <point key="canvasLocation" x="969.56521739130437" y="89.732142857142847"/>
         </scene>
     </scenes>
     <resources>

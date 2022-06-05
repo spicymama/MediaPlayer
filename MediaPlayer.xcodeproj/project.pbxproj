@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3807D4D1C9EA2BDF42C86DFA /* Pods_MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3867154DDF5C62AD65F90343 /* Pods_MediaPlayer.framework */; };
-		EA24752B28453C61002EBF10 /* AVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA24752A28453C61002EBF10 /* AVViewController.swift */; };
+		EA24752D28483DA3002EBF10 /* GFYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA24752C28483DA3002EBF10 /* GFYViewController.swift */; };
 		EAD824EE284274D80062A895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD824ED284274D80062A895 /* AppDelegate.swift */; };
 		EAD824F0284274D80062A895 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD824EF284274D80062A895 /* SceneDelegate.swift */; };
 		EAD824F5284274D80062A895 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD824F3284274D80062A895 /* Main.storyboard */; };
 		EAD824F7284274D90062A895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAD824F6284274D90062A895 /* Assets.xcassets */; };
 		EAD82506284275A80062A895 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD82505284275A80062A895 /* Video.swift */; };
 		EAD82508284275D20062A895 /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD82507284275D20062A895 /* VideoController.swift */; };
-		EAD8250A284275EF0062A895 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD82509284275EF0062A895 /* VideoViewController.swift */; };
 		EAD8250C284276050062A895 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8250B284276050062A895 /* PostTableViewController.swift */; };
 		EAD8250E284277270062A895 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8250D284277270062A895 /* Error.swift */; };
 		EAD82510284279DF0062A895 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8250F284279DF0062A895 /* PostTableViewCell.swift */; };
@@ -25,7 +24,7 @@
 		3867154DDF5C62AD65F90343 /* Pods_MediaPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF20F2A863EAA67B7886B82 /* Pods-MediaPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaPlayer.release.xcconfig"; path = "Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		D2B04B7766C55A8BE91C8E6B /* Pods-MediaPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaPlayer.debug.xcconfig"; path = "Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer.debug.xcconfig"; sourceTree = "<group>"; };
-		EA24752A28453C61002EBF10 /* AVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVViewController.swift; sourceTree = "<group>"; };
+		EA24752C28483DA3002EBF10 /* GFYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFYViewController.swift; sourceTree = "<group>"; };
 		EAD824EA284274D80062A895 /* MediaPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD824ED284274D80062A895 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAD824EF284274D80062A895 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +33,6 @@
 		EAD824FB284274D90062A895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAD82505284275A80062A895 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		EAD82507284275D20062A895 /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
-		EAD82509284275EF0062A895 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		EAD8250B284276050062A895 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		EAD8250D284277270062A895 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		EAD8250F284279DF0062A895 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,8 +122,7 @@
 			children = (
 				EAD82507284275D20062A895 /* VideoController.swift */,
 				EAD8250B284276050062A895 /* PostTableViewController.swift */,
-				EAD82509284275EF0062A895 /* VideoViewController.swift */,
-				EA24752A28453C61002EBF10 /* AVViewController.swift */,
+				EA24752C28483DA3002EBF10 /* GFYViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,10 +252,9 @@
 				EAD824EE284274D80062A895 /* AppDelegate.swift in Sources */,
 				EAD8250C284276050062A895 /* PostTableViewController.swift in Sources */,
 				EAD82506284275A80062A895 /* Video.swift in Sources */,
-				EA24752B28453C61002EBF10 /* AVViewController.swift in Sources */,
 				EAD82510284279DF0062A895 /* PostTableViewCell.swift in Sources */,
+				EA24752D28483DA3002EBF10 /* GFYViewController.swift in Sources */,
 				EAD824F0284274D80062A895 /* SceneDelegate.swift in Sources */,
-				EAD8250A284275EF0062A895 /* VideoViewController.swift in Sources */,
 				EAD8250E284277270062A895 /* Error.swift in Sources */,
 				EAD82508284275D20062A895 /* VideoController.swift in Sources */,
 			);
